@@ -12,6 +12,9 @@
       <b-navbar-item href="#/orders">
         Orders
       </b-navbar-item>
+      <b-navbar-item href="#/orders/new">
+        New Order
+      </b-navbar-item>
       <b-navbar-item href="#/reports">
         Reports
       </b-navbar-item>
@@ -20,6 +23,12 @@
     <template slot="end">
       <b-navbar-item tag="div">
         <div class="buttons">
+          <a href="#/signup" class="button is-light">
+            <strong>Username</strong>
+          </a>
+          <a href="#/login" class="button is-light">
+            Log out
+          </a>
           <a href="#/signup" class="button is-primary">
             <strong>Sign up</strong>
           </a>

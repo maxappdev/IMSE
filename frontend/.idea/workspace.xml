@@ -20,16 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d82fffa3-e50f-414f-b8ec-87cf1be66b79" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/LogIn.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Navbar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/OrdersTable.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Reports.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SignUp.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/HelloWorld.vue" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/OrdersNew.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LogIn.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LogIn.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/OrdersTable.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/OrdersTable.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Reports.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Reports.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SignUp.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SignUp.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +60,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1607938971019</updated>
-      <workItem from="1607938982621" duration="6355000" />
+      <workItem from="1607938982621" duration="6773000" />
+      <workItem from="1607960602490" duration="1107000" />
+      <workItem from="1608996849770" duration="1187000" />
+      <workItem from="1608999915924" duration="3280000" />
     </task>
     <servers />
   </component>
@@ -80,6 +80,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="586" y="326" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1607940255228">

@@ -2,7 +2,8 @@
   <div class="card" id="signup-card">
   <section id="card-content">
     <b-field label="Name">
-      <b-input value="Kevin Garvey"></b-input>
+      <b-input value="" placeholder="First Name"></b-input>
+      <b-input value="" placeholder="Last Name"></b-input>
     </b-field>
 
     <b-field label="Email"
@@ -12,6 +13,13 @@
                value="john@"
                maxlength="30">
       </b-input>
+    </b-field>
+
+    <b-field label="Address">
+      <b-input value="" placeholder="City"></b-input>
+      <b-input value="" placeholder="Street"></b-input>
+      <b-input value="" placeholder="House"></b-input>
+      <b-input value="" placeholder="Postcode"></b-input>
     </b-field>
 
     <b-field label="Username"
@@ -26,10 +34,10 @@
       <b-input value="123" type="password" maxlength="30"></b-input>
     </b-field>
 
-    <b-field label="Subject">
-      <b-select placeholder="Select a subject">
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
+    <b-field label="Role">
+      <b-select placeholder="Select a role">
+        <option value="1">Customer</option>
+        <option value="2">Admin</option>
       </b-select>
     </b-field>
     <b-button type="is-primary">Sign Up</b-button>
@@ -50,7 +58,7 @@ export default {
 
 <style scoped>
 #signup-card{
-  margin: 30px auto;
+  margin: 10px auto;
   width: 30%;
   padding: 10px;
 }

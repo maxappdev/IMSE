@@ -1,7 +1,6 @@
 <template>
   <div class="card" id="login-card">
     <section id="card-content">
-      <b-checkbox v-model="hasError">Show errors</b-checkbox>
 
       <b-field label="Username"
                :type="{ 'is-danger': hasError }"

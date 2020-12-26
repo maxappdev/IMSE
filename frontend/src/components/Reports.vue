@@ -10,18 +10,26 @@
               trap-focus>
           </b-datepicker>
         </b-field>
-        <b-button>Count</b-button>
-      </b-tab-item>
-
-      <b-tab-item label="Customers Buy Specific Good">
-        <b-field label="Subject"
-                 :label-position="labelPosition">
-          <b-select placeholder="Select a subject">
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-          </b-select>
+        <b-field label="Name of good">
+          <b-input value="" placeholder="Enter Name"></b-input>
         </b-field>
         <b-button>Count</b-button>
+        <div>Result: 14 Customers</div>
+      </b-tab-item>
+
+      <b-tab-item label="Customers From Country Buy Specific Good">
+        <b-field label="Country"
+                 :label-position="labelPosition">
+          <b-select placeholder="Select a country">
+            <option value="1">Germany</option>
+            <option value="2">England</option>
+          </b-select>
+        </b-field>
+        <b-field label="Name of good">
+          <b-input value="" placeholder="Enter Name"></b-input>
+        </b-field>
+        <b-button>Count</b-button>
+        <div>Result: 14 Customers</div>
       </b-tab-item>
 
     </b-tabs>

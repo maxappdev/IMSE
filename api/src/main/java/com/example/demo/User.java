@@ -2,45 +2,56 @@
 package com.example.demo;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 @Table(name="Users")
 public class User {
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    private int user_id;
+    @Column(name = "userId")
+    private int userId;
+    @Column(name = "username")
     private String username;
-    private String user_firstname;
-    private String user_lastname;
-    private String user_email;
+    @Column(name = "firstname")
+    private String firstname;
+    @Column(name = "lastname")
+    private String lastname;
+    @Column(name = "email")
+    private String email;
+    @Column(name = "activity")
     private boolean is_active;
-    public void setUser_id(int user_id){this.user_id= user_id;}
-    public void setUsername(String username){this.username=username;}
-    public void setUser_firstname(String user_firstname){this.user_firstname=user_firstname;}
-    public void setUser_lastname(String user_lastname){this.user_lastname=user_lastname;}
-    public void setUser_email(String user_email) {this.user_email=user_email;}
-    public void setIs_active(boolean is_active){this.is_active=is_active;}
 
-    public int getUser_id() {
-        return user_id;
+
+    public void set_username(String username){this.username=username;}
+    public void set_firstname(String firstname){this.firstname=firstname;}
+    public void set_lastname(String lastname){this.lastname=lastname;}
+    public void set_email(String email) {this.email=email;}
+    public void set_is_active(boolean is_active){this.is_active=is_active;}
+
+
+    public int getUserid() {
+        return userId;
     }
 
-    public String getUser_email() {
-        return user_email;
+    public String get_email() {
+        return email;
     }
 
-    public String getUser_firstname() {
-        return user_firstname;
+    public String get_firstname() {
+        return firstname;
     }
 
-    public String getUser_lastname() {
-        return user_lastname;
+    public String get_lastname() {
+        return lastname;
     }
 
-    public String getUsername() {
+    public String get_username() {
         return username;
     }
-    public boolean getIs_active(){
+    public boolean get_is_active(){
         return is_active;
     }
 }

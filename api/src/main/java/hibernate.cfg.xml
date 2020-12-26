@@ -13,6 +13,20 @@
         <property name="hibernate.hbm2ddl.auto">create</property>
 
         <mapping class="com.example.demo.User"/>
+        <mapping class="com.example.demo.Admin"/>
+        <mapping class="com.example.demo.Customer"/>
+        <mapping class="com.example.demo.Product"/>
+        <mapping class="com.example.demo.Category"/>
+        <mapping class="com.example.demo.Address"/>
+        <mapping class="com.example.demo.Card"/>
+        <mapping class="com.example.demo.City"/>
+        <mapping class="com.example.demo.Country"/>
+        <mapping class="com.example.demo.Currency"/>
+        <mapping class="com.example.demo.Order"/>
+        <mapping class="com.example.demo.Payment"/>
+        <mapping class="com.example.demo.Paypal"/>
+        <mapping class="com.example.demo.Price"/>
+
 
     </session-factory>
 </hibernate-configuration>

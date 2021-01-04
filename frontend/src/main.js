@@ -15,16 +15,34 @@ Vue.use(Buefy)
 Vue.config.productionTip = false
 
 const routes = [
-    { path: '/orders', component: OrdersTable },
-    { path: '/orders/new', component: OrdersNew },
-    { path: '/reports', component: Reports },
-    { path: '/signup', component: SignUp },
-    { path: '/login', component: LogIn }
+    { path: '/orders', component: OrdersTable, meta: {requiresAuth: true}},
+    { path: '/orders/new', component: OrdersNew, meta: {requiresAuth: true}},
+    { path: '/reports', component: Reports, meta: {requiresAuth: true}},
+    { path: '/signup', component: SignUp, meta: {requiresAuth: false}},
+    { path: '/login', component: LogIn, meta: {requiresAuth: false}},
 ]
 
 const router = new VueRouter({
     routes // short for `routes: routes`
 })
+
+router.beforeEach((to, from, next) => {
+    if (to.matched.some((record) => record.meta.requiresAuth)) {
+        if (!isAuthenticated()) {
+            alert("You are not logged in")
+            next('/login')
+        }
+        else{
+            next()
+        }
+    } else {
+        next()
+    }
+})
+
+function isAuthenticated() {
+    return localStorage.getItem("token") != null
+}
 
 new Vue({
     render: h => h(App),

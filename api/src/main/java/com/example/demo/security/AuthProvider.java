@@ -18,6 +18,9 @@ public class AuthProvider implements AuthenticationProvider {
   @Autowired
   private AdminRepository adminRepository;
 
+  @Autowired
+  private CustomerRepository customerRepository;
+
   @Override
   public Authentication authenticate(Authentication authentication) throws AuthenticationException {
 
@@ -26,17 +29,33 @@ public class AuthProvider implements AuthenticationProvider {
     String username = authentication.getName();
     String password = authentication.getCredentials().toString();
 
-    Admin admin = adminRepository.findAdminByUsername(username);
+    User user = getAuthenticatedUser(username);
 
-    if (admin != null) {
-      String userRole = admin.getRole().toString();
+    if (user != null) {
+      String userRole = user.getRole().toString();
 
       List<GrantedAuthority> authorities = new ArrayList<>();
       authorities.add(new SimpleGrantedAuthority(userRole));
 
-      if(password.equals(admin.getPassword())){
+      if(password.equals(user.getPassword())){
         result = new UsernamePasswordAuthenticationToken(username, password, authorities);
       }
+    }
+
+    return result;
+  }
+
+  private User getAuthenticatedUser(String username) {
+    User result = null;
+
+    Admin admin = adminRepository.findAdminByUsername(username);
+    Customer customer = customerRepository.findCustomerByUsername(username);
+
+    if(admin != null){
+      result = admin;
+    }
+    else if(customer != null){
+      result = customer;
     }
 
     return result;

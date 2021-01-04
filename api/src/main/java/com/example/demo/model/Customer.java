@@ -1,36 +1,32 @@
 
 package com.example.demo.model;
 
+import java.util.*;
 import javax.persistence.*;
 import java.time.LocalDate;
 
 @Entity
 public class Customer extends User {
 
-
     @Column(name = "birth_date")
-    private LocalDate birth_date;
+    private Date birthDate;
     @Column(name = "personal_discount")
-    private double personal_discount;
+    private double personalDiscount;
 
-
-    public void set_birth_date(LocalDate birth_date) {
-        this.birth_date = birth_date;
+    public Date getBirthDate() {
+        return birthDate;
     }
 
-    public void set_personal_discount(double personal_discount) {
-        this.personal_discount = personal_discount;
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
     }
 
-
-
-
-    public double get_personal_discount() {
-        return personal_discount;
+    public double getPersonalDiscount() {
+        return personalDiscount;
     }
 
-    public LocalDate get_birth_date() {
-        return birth_date;
+    public void setPersonalDiscount(double personalDiscount) {
+        this.personalDiscount = personalDiscount;
     }
 
     @Override

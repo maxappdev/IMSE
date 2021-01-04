@@ -23,10 +23,7 @@
     <template slot="end">
       <b-navbar-item tag="div">
         <div class="buttons">
-          <a href="#/signup" class="button is-light">
-            <strong>Username</strong>
-          </a>
-          <a href="#/login" class="button is-light">
+          <a href="#" @click="logout" class="button is-light">
             Log out
           </a>
           <a href="#/signup" class="button is-primary">
@@ -43,6 +40,12 @@
 
 <script>
 export default {
-  name: 'Navbar'
+  name: 'Navbar',
+  methods : {
+    logout: function(){
+      localStorage.removeItem("token")
+      alert("You are logged out")
+    }
+  }
 }
 </script>

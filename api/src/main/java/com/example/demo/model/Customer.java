@@ -16,7 +16,6 @@ public class Customer extends User {
 
     public void set_birth_date(LocalDate birth_date) {
         this.birth_date = birth_date;
-
     }
 
     public void set_personal_discount(double personal_discount) {
@@ -35,7 +34,7 @@ public class Customer extends User {
     }
 
     @Override
-    public Role getRole() {
-        return Role.CUSTOMER;
+    public Roles getRole() {
+        return Roles.CUSTOMER;
     }
 }

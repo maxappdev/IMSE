@@ -1,6 +1,7 @@
 
 package com.example.demo.model;
 
+import java.util.*;
 import javax.persistence.*;
 import javax.persistence.Entity;
 
@@ -31,11 +32,11 @@ public abstract class User {
     }
 
     public String getPassword() {
-        return password;
+        return new String(Base64.getDecoder().decode(password));
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.password = Base64.getEncoder().encodeToString(password.getBytes());;
     }
 
     public void setUsername(String username) {
@@ -74,7 +75,7 @@ public abstract class User {
         this.isActive = active;
     }
 
-    public Role getRole(){
-        return Role.ADMIN;
+    public Roles getRole(){
+        return Roles.ADMIN;
     }
 }

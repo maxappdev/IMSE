@@ -21,16 +21,25 @@ public class AuthProvider implements AuthenticationProvider {
   @Override
   public Authentication authenticate(Authentication authentication) throws AuthenticationException {
 
+    UsernamePasswordAuthenticationToken result = new UsernamePasswordAuthenticationToken("", "", new ArrayList<>());
+
     String username = authentication.getName();
     String password = authentication.getCredentials().toString();
 
     Admin admin = adminRepository.findAdminByUsername(username);
-    String userRole = admin.getRole().toString();
 
-    List<GrantedAuthority> authorities = new ArrayList<>();
-    authorities.add(new SimpleGrantedAuthority(userRole));
+    if (admin != null) {
+      String userRole = admin.getRole().toString();
 
-    return new UsernamePasswordAuthenticationToken(username, password, authorities);
+      List<GrantedAuthority> authorities = new ArrayList<>();
+      authorities.add(new SimpleGrantedAuthority(userRole));
+
+      if(password.equals(admin.getPassword())){
+        result = new UsernamePasswordAuthenticationToken(username, password, authorities);
+      }
+    }
+
+    return result;
   }
 
   @Override

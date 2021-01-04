@@ -2,7 +2,6 @@ package com.example.demo.model;
 
 import java.util.*;
 import javax.persistence.*;
-import java.time.LocalDate;
 
 @Entity
 public class Admin extends User {
@@ -27,7 +26,7 @@ public class Admin extends User {
     }
 
     @Override
-    public Role getRole() {
-        return Role.ADMIN;
+    public Roles getRole() {
+        return Roles.ADMIN;
     }
 }

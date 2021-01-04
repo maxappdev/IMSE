@@ -26,7 +26,7 @@ public class DemoApplication {
         admin.setLastname("Adminovich");
         admin.setEmail("email@mail.com");
         admin.setActive(true);
-        admin.setUsername("admin1");
+        admin.setUsername("admin");
         admin.setPassword("123");
         admin.setLastLoginDate(new Date());
         admin.setWebsiteOwner(true);

@@ -2,17 +2,19 @@ version: '3.6'
 
 services:
   #change these commented blocks to add your chosen database images as containers to your project
+  sql:
+    image: mysql:latest
+    container_name: sql
+    restart: always
+    ports:
+          - "3360:3360"
+    environment:
+      - MYSQL_USER=user
+      - MYSQL_PASSWORD=1234
+      - MYSQL_ROOT_PASSWORD=123
+      - MYSQL_DATABASE=test
+    #  - MYSQL_ALLOW_EMPTY_PASSWORD=yes
 
-   sql:
-     image: mysql:latest
-     container_name: sql
-     restart: always
-     environment:
-       - MYSQL_USER=user
-       - MYSQL_PASSWORD=1234
-       - MYSQL_ROOT_PASSWORD=123
-       - MYSQL_DATABASE=imse_sql_db
-       - MYSQL_ALLOW_EMPTY_PASSWORD=yes
 
   # mongo:
   #   image: mongo

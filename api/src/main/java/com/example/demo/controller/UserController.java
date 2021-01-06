@@ -1,8 +1,7 @@
-package com.example.demo;
+package com.example.demo.controller;
 
 import com.example.demo.model.*;
 import com.example.demo.repository.*;
-import java.util.*;
 import org.springframework.beans.factory.annotation.*;
 import org.springframework.http.*;
 import org.springframework.security.access.prepost.*;

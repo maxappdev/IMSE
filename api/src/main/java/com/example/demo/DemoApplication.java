@@ -33,6 +33,7 @@ public class DemoApplication {
 
         session.save(admin);
         transaction.commit();
+
         }
 
 }
